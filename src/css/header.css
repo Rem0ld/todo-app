@@ -1,0 +1,29 @@
+.header {
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.input-main {
+  margin-bottom: 1em;
+}
+
+.btn {
+  width: 19px;
+  height: 17px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.btn-check {
+  margin-right: 0.5em;
+  border: 1px solid var(--very-dark-grayish-blue-again);
+  border-radius: 50%;
+}
