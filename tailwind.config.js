@@ -33,6 +33,7 @@ module.exports = {
         light: "hsl(235, 19%, 35%)",
         dark: "hsl(234, 11%, 52%)",
         special: "hsl(233, 14%, 35%)",
+        filter: "hsl(220, 98%, 61%)",
       },
       elements: {
         light: "hsl(0, 0%, 98%)",
@@ -45,6 +46,10 @@ module.exports = {
       input: {
         light: "hsl(235, 19%, 35%)",
         dark: "hsl(236, 9%, 61%)",
+      },
+      linearBackground: {
+        first: "hsl(192, 100%, 67%)",
+        second: "hsl(280, 87%, 65%)",
       },
     },
     letterSpacing: {
