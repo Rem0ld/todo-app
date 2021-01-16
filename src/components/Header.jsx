@@ -24,28 +24,28 @@ const Header = (props) => {
     }
   };
   return (
-    <header className="h-52 sm:bg-heroMobileLight sm:dark:bg-heroMobileDark lg:bg-heroDesktopLight lg:dark:bg-heroDesktopDark bg-no-repeat">
-      <div className="flex justify-between items-center w-11/12 mx-auto mb-8 pt-11">
-        <h1 className="text-white text-2xl font-semibold tracking-widest">
+    <header className="h-52 sm:bg-heroMobileLight sm:dark:bg-heroMobileDark md:bg-heroDesktopLight md:dark:bg-heroDesktopDark md:bg-cover bg-no-repeat">
+      <div className="flex justify-between items-center w-11/12 md:w-3/5 lg:w-2/6 mx-auto mb-8 pt-11">
+        <h1 className="text-white text-2xl lg:text-4xl font-semibold tracking-widest">
           TODO
         </h1>
         <img
-          className="w-5 cursor-pointer"
+          className="w-6 cursor-pointer"
           src={props.theme === "dark" ? sun : moon}
           alt="icon"
           onClick={props.toggleTheme}
         />
       </div>
       <form
-        className="flex p-4 w-11/12 mx-auto  bg-white dark:bg-elements-dark rounded-md"
+        className="flex items-center p-4 w-11/12 md:w-3/5 lg:w-2/6 mx-auto  bg-white dark:bg-elements-dark rounded-md"
         onSubmit={handleSubmit}
       >
         <div
-          className="w-5 h-5 rounded-full border border-bdr-light dark:border-bdr-dark"
+          className="w-5 h-5 flex-none rounded-full border border-bdr-light dark:border-bdr-dark"
           onClick={handleSubmit}
         ></div>
         <input
-          className="w-full ml-2 bg-white dark:bg-elements-dark font-light text-xs text-txt-light dark:text-txt-dark placeholder-txt-special dark:placeholder-input-dark focus:outline-none"
+          className="w-full ml-4 bg-white dark:bg-elements-dark font-normal text-sm text-txt-light dark:text-txt-white placeholder-txt-special dark:placeholder-input-dark focus:outline-none"
           type="text"
           placeholder="Create a new todo..."
           ref={input}

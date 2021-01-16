@@ -14,6 +14,7 @@ module.exports = {
     },
     screens: {
       sm: "375px",
+      md: "768px",
       lg: "1440px",
     },
     colors: {
@@ -30,10 +31,11 @@ module.exports = {
         dark: "hsl(235, 21%, 11%)",
       },
       txt: {
-        light: "hsl(235, 19%, 35%)",
         dark: "hsl(234, 11%, 52%)",
-        special: "hsl(233, 14%, 35%)",
         filter: "hsl(220, 98%, 61%)",
+        light: "hsl(235, 19%, 35%)",
+        special: "hsl(233, 14%, 35%)",
+        white: "hsl(234, 39%, 85%)",
       },
       elements: {
         light: "hsl(0, 0%, 98%)",
@@ -53,6 +55,7 @@ module.exports = {
       },
     },
     letterSpacing: {
+      wider: "1px",
       widest: "10px",
     },
   },
