@@ -5,6 +5,7 @@ export const ADD_TODO_ACTION = "ADD_TODO_ACTION";
 export const DELETE_TODO_ACTION = "DELETE_TODO_ACTION";
 export const TOGGLE_TODO_ACTION = "TOGGLE_TODO_ACTION";
 export const CLEAR_COMPLETED_ACTION = "CLEAR_COMPLETED_ACTION";
+export const UPDATE_TODO_ACTION = "UPDATE_TODO_ACTION";
 
 const addTodo = (state, action) => {
   return [...state, { id: ++id, completed: false, ...action.payload }];
@@ -26,6 +27,14 @@ const clearCompletedTodo = (state, action) => {
   return state.filter((todo) => todo.completed !== true);
 };
 
+const updateTodoAction = (state, action) => {
+  return state.map((todo) =>
+    todo.id === action.payload.id
+      ? { ...todo, content: action.payload.newContent }
+      : todo
+  );
+};
+
 export default function todosReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_TODO_ACTION:
@@ -36,6 +45,8 @@ export default function todosReducer(state = initialState, action) {
       return toggleTodo(state, action);
     case CLEAR_COMPLETED_ACTION:
       return clearCompletedTodo(state, action);
+    case UPDATE_TODO_ACTION:
+      return updateTodoAction(state, action);
     default:
       return state;
   }

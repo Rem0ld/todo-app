@@ -3,6 +3,7 @@ import {
   CLEAR_COMPLETED_ACTION,
   DELETE_TODO_ACTION,
   TOGGLE_TODO_ACTION,
+  UPDATE_TODO_ACTION,
 } from "./todosReducer";
 
 export const toggleTodoAction = (todo) => ({
@@ -22,4 +23,12 @@ export const addTodoAction = (content) => ({
 
 export const clearCompletedTodo = () => ({
   type: CLEAR_COMPLETED_ACTION,
+});
+
+export const updateTodoAction = (todo, newContent) => ({
+  type: UPDATE_TODO_ACTION,
+  payload: {
+    todo,
+    newContent,
+  },
 });
