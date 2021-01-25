@@ -34,6 +34,7 @@ module.exports = {
         dark: "hsl(234, 11%, 52%)",
         filter: "hsl(220, 98%, 61%)",
         light: "hsl(235, 19%, 35%)",
+        completed: "hsl(233, 11%, 84%)",
         special: "hsl(233, 14%, 35%)",
         white: "hsl(234, 39%, 85%)",
       },

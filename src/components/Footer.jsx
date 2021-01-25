@@ -8,7 +8,7 @@ export function Footer({ value, onChange, classes }) {
     <div className={classes ? classes.div : ""}>
       <ul className={classes ? classes.ul : ""}>
         <li
-          className={`cursor-pointer hover:text-txt-white ${
+          className={`cursor-pointer hover:text-bdr-dark dark:hover:text-txt-white ${
             value === "all" ? "text-txt-filter" : ""
           }`}
           onClick={() => onChange("all")}
@@ -16,7 +16,7 @@ export function Footer({ value, onChange, classes }) {
           All
         </li>
         <li
-          className={`cursor-pointer hover:text-txt-white ${
+          className={`cursor-pointer hover:text-bdr-dark dark:hover:text-txt-white ${
             value === false ? "text-txt-filter" : ""
           }`}
           onClick={() => onChange(false)}
@@ -24,7 +24,7 @@ export function Footer({ value, onChange, classes }) {
           Active
         </li>
         <li
-          className={`cursor-pointer hover:text-txt-white ${
+          className={`cursor-pointer hover:text-bdr-dark dark:hover:text-txt-white ${
             value === true ? "text-txt-filter" : ""
           }`}
           onClick={() => onChange(true)}

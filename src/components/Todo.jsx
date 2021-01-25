@@ -16,7 +16,7 @@ export function Todo({ todo, onToggle, onDelete, listId }) {
       }`}
     >
       <div
-        className={`w-5 h-5 flex-none grid place-items-center rounded-full border border-bdr-light dark:border-bdr-dark ${
+        className={`w-5 h-5 flex-none grid place-items-center rounded-full border border-bdr-light dark:border-bdr-dark cursor-pointer ${
           todo.completed
             ? "bg-gradient-to-r from-linearBackground-first to-linearBackground-second"
             : ""
@@ -27,8 +27,10 @@ export function Todo({ todo, onToggle, onDelete, listId }) {
       </div>
       <input
         className={`${
-          todo.completed ? "line-through" : ""
-        } w-full ml-4 bg-white dark:bg-elements-dark font-thin text-md text-txt-light dark:text-txt-white tracking-wider placeholder-txt-special dark:placeholder-input-dark focus:outline-none`}
+          todo.completed
+            ? "line-through text-txt-completed dark:text-txt-completed"
+            : ""
+        } w-full ml-4 bg-white dark:bg-elements-dark font-thin text-md text-txt-light dark:text-txt-white tracking-wider placeholder-txt-special dark:placeholder-input-dark focus:outline-none cursor-pointer`}
         type="text"
         value={todo.content}
       />
